@@ -10,8 +10,8 @@ const projects: Project[] = [
     description: 'Engineered an ML model (XGBoost) with 98% accuracy, leveraging Power BI for visualization. This project highlights my data analysis and ETL pipeline skills.',
     imageUrl: 'https://picsum.photos/seed/insurance/500/300',
     technologies: ['XGBoost', 'Power BI', 'Python', 'Spark', 'Informatica'],
-    liveUrl: '#',
-    repoUrl: '#',
+    liveUrl: 'https://ml-premium-prediction-project.streamlit.app/',
+    repoUrl: 'https://github.com/Mukundatram/ml-project-premium-project',
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const projects: Project[] = [
     description: 'Developed an LLM-based system using Gemini API, FastAPI, and Streamlit, which improved answer accuracy by 30%. This project demonstrates cloud-based AI deployment and API integration.',
     imageUrl: 'https://picsum.photos/seed/genai/500/300',
     technologies: ['Gemini API', 'FastAPI', 'Streamlit', 'AWS/Azure', 'Python'],
-    liveUrl: '#',
-    repoUrl: '#',
+    liveUrl: 'https://qnasystem-8cqk4clnetvz5gvp8eznye.streamlit.app/',
+    repoUrl: 'https://github.com/mukund-v-atram/qna_system',
   },
 ];
 
