@@ -10,7 +10,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onViewResume }) => {
       <div className="flex flex-col md:flex-row items-center gap-12 px-4">
         <div className="md:order-2">
             <img 
-                src="https://drive.google.com/file/d/1yctmuVbjcVPgsq32MG2bOB6Y-k9dbqLL/view?usp=drive_link" 
+                src="https://media.licdn.com/dms/image/v2/D4D12AQH_659RqkP-XQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1736775500834?e=2147483647&v=beta&t=SfutwudFpwQPvOjzoWrKYx5myRuBSK1SRYhvqbsJKiU" 
                 alt="Mukund V. Atram" 
                 className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-cyan-500 shadow-2xl shadow-cyan-500/20"
             />
