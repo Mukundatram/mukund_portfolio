@@ -39,7 +39,7 @@ const resumeData = {
     projects: [
         {
             title: 'Health Insurance Premium Prediction',
-            liveDemo: '#',
+            liveDemo: 'https://ml-premium-prediction-project.streamlit.app/',
             points: [
                 'Engineered an ML model (XGBoost) with 98% accuracy, leveraging Power BI for visualization.',
                 { 'Relevance': 'Highlights data analysis and ETL pipeline skills (Spark/Informatica).' }
@@ -47,7 +47,7 @@ const resumeData = {
         },
         {
             title: 'GenAI-Powered QnA System',
-            liveDemo: '#',
+            liveDemo: 'https://qnasystem-8cqk4clnetvz5gvp8eznye.streamlit.app/',
             points: [
                 'Developed an LLM-based system using Gemini API, FastAPI, and Streamlit, improving answer accuracy by 30%.',
                 { 'Relevance': 'Demonstrates cloud-based AI deployment (AWS/Azure) and API integration.' }
