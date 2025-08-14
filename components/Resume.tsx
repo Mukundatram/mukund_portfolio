@@ -1,4 +1,7 @@
-import React from 'react';
+
+import React, { useRef, useState } from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const resumeData = {
     name: 'Mukund V. Atram',
@@ -80,9 +83,38 @@ interface ResumeProps {
 }
 
 const Resume: React.FC<ResumeProps> = ({ onBack }) => {
+    const resumeRef = useRef<HTMLDivElement>(null);
+    const [isDownloading, setIsDownloading] = useState(false);
+
+    const handleDownload = () => {
+        const input = resumeRef.current;
+        if (!input || isDownloading) return;
+
+        setIsDownloading(true);
+        html2canvas(input, {
+            scale: 2, // for better quality
+            useCORS: true,
+        }).then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF({
+                orientation: canvas.width > canvas.height ? 'l' : 'p',
+                unit: 'px',
+                format: [canvas.width, canvas.height],
+                hotfixes: ["px_scaling"], // important for px units
+            });
+            pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+            pdf.save('Mukund_Atram_Resume.pdf');
+        }).catch(err => {
+            console.error("Failed to generate PDF", err);
+            alert("An error occurred while generating the PDF.");
+        }).finally(() => {
+            setIsDownloading(false);
+        });
+    };
+
     return (
         <div className="bg-slate-200 p-4 md:p-8 min-h-screen font-sans">
-             <div className="max-w-4xl mx-auto bg-white text-slate-800 shadow-2xl p-6 md:p-10">
+             <div ref={resumeRef} className="max-w-4xl mx-auto bg-white text-slate-800 shadow-2xl p-6 md:p-10">
                 <header className="text-center mb-8 border-b border-slate-200 pb-6">
                     <h1 className="text-4xl font-bold text-slate-900">{resumeData.name}</h1>
                     <p className="text-md text-slate-600 mt-1">{resumeData.titles.join(' | ')}</p>
@@ -175,12 +207,19 @@ const Resume: React.FC<ResumeProps> = ({ onBack }) => {
                     </Section>
                 </main>
             </div>
-             <div className="text-center mt-8">
+             <div className="text-center mt-8 flex justify-center items-center gap-4">
                  <button 
                      onClick={onBack}
-                     className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                     className="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300"
                  >
                      Back to Portfolio
+                 </button>
+                 <button 
+                     onClick={handleDownload}
+                     disabled={isDownloading}
+                     className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 disabled:bg-cyan-800 disabled:cursor-not-allowed"
+                 >
+                     {isDownloading ? 'Downloading...' : 'Download PDF'}
                  </button>
              </div>
         </div>
