@@ -6,7 +6,7 @@ const ContactFooter: React.FC = () => {
   const [message, setMessage] = useState('');
 
   const socialLinks = [
-    { name: 'GitHub', icon: <GitHubIcon className="w-7 h-7" />, url: 'https://github.com/mukund-v-atram' },
+    { name: 'GitHub', icon: <GitHubIcon className="w-7 h-7" />, url: 'https://github.com/Mukundatram' },
     { name: 'LinkedIn', icon: <LinkedInIcon className="w-7 h-7" />, url: 'https://www.linkedin.com/in/mukund-atram/' },
     { name: 'Email', icon: <MailIcon className="w-7 h-7" />, url: 'mailto:mukundvatram@gmail.com' },
   ];

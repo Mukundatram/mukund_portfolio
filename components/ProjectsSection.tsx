@@ -8,7 +8,7 @@ const projects: Project[] = [
     id: 1,
     title: 'Health Insurance Premium Prediction',
     description: 'Engineered an ML model (XGBoost) with 98% accuracy, leveraging Power BI for visualization. This project highlights my data analysis and ETL pipeline skills.',
-    imageUrl: 'https://picsum.photos/seed/insurance/500/300',
+    imageUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8d58b278-e16f-4df2-a203-ea0be131edc3.png',
     technologies: ['XGBoost', 'Power BI', 'Python', 'Spark', 'Informatica'],
     liveUrl: 'https://ml-premium-prediction-project.streamlit.app/',
     repoUrl: 'https://github.com/Mukundatram/ml-project-premium-project',
@@ -17,11 +17,20 @@ const projects: Project[] = [
     id: 2,
     title: 'GenAI-Powered QnA System',
     description: 'Developed an LLM-based system using Gemini API, FastAPI, and Streamlit, which improved answer accuracy by 30%. This project demonstrates cloud-based AI deployment and API integration.',
-    imageUrl: 'https://picsum.photos/seed/genai/500/300',
+    imageUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/92fdde88-0aa4-4415-8c12-e7d51aa6501c.png',
     technologies: ['Gemini API', 'FastAPI', 'Streamlit', 'AWS/Azure', 'Python'],
     liveUrl: 'https://qnasystem-8cqk4clnetvz5gvp8eznye.streamlit.app/',
     repoUrl: 'https://github.com/mukund-v-atram/qna_system',
   },
+ {
+  id: 3,
+  title: 'AI Code Explainer & Interview Prep Assistant',
+  description: 'Developed an AI assistant that helps users prepare for coding interviews by analyzing questions, providing explanations, and suggesting solutions. Integrated LLM models with cloud deployment for real-time responses.',
+  imageUrl: 'https://imgs.search.brave.com/dydfYVVmmcQL5w2xACAGmW_jqC0CrJC-UIJ44igboRs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y29tcHV0ZXJob3Bl/LmNvbS9qYXJnb24v/cC9wcm9ncmFtLnBu/Zw',
+  technologies: ['PyTorch', 'LLM', 'Streamlit', 'FastAPI', 'Python'],
+  liveUrl: 'https://ai-code-explainer-interview-prep-assistant.streamlit.app/',
+  repoUrl: 'https://github.com/Mukundatram/Ai-Code-Explainer-Interview-Prep-Assistant',
+},
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
