@@ -46,6 +46,14 @@ const resumeData = {
             ]
         },
         {
+            title: 'AI Code Explainer & Interview Prep Assistant',
+            liveDemo: 'https://ai-code-explainer-interview-prep-assistant.streamlit.app/',
+            points: [
+                'Developed an AI assistant that helps users prepare for coding interviews by analyzing questions, providing explanations, and suggesting solutions. Integrated LLM models with cloud deployment for real-time responses.',
+                { 'Relevance': 'Demonstrates cloud-based AI deployment (AWS/Azure) and API integration.' }
+            ]
+        },
+        {
             title: 'GenAI-Powered QnA System',
             liveDemo: 'https://qnasystem-8cqk4clnetvz5gvp8eznye.streamlit.app/',
             points: [
